@@ -126,8 +126,8 @@ section.quote {
   background-position: center;
   -webkit-box-shadow: 10px 10px 15px 0px rgba(0, 0, 0, 0.6);
           box-shadow: 10px 10px 15px 0px rgba(0, 0, 0, 0.6);
-  -webkit-transform: rotateZ(-15deg);
-          transform: rotateZ(-15deg);
+  -webkit-transform: rotateZ(-8deg);
+          transform: rotateZ(-8deg);
   z-index: 5;
 }
 
