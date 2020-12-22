@@ -1,0 +1,226 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+p {
+  color: #056674;
+  text-align: center;
+  font-family: 'Merriweather', serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  background-color: #E0ECE4;
+}
+
+h1, h2, h3 {
+  padding: .5em;
+  font-size: 3em;
+  text-align: center;
+  color: #056674;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.grid-container {
+  margin: 0;
+  padding: 0;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1.2fr 1.5fr;
+      grid-template-columns: 1fr 1.2fr 1.5fr;
+  -ms-grid-rows: 0.5fr 6fr 3fr 1fr;
+      grid-template-rows: 0.5fr 6fr 3fr 1fr;
+      grid-template-areas: "main main header" "main main other" "masks testimonial quote" "masks footer footer";
+  height: 100vh;
+}
+
+main {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: main;
+  background-color: #E0ECE4;
+  text-align: center;
+}
+
+main h1 {
+  padding-bottom: 0;
+}
+
+header {
+  -ms-grid-row: 1;
+  -ms-grid-column: 3;
+  grid-area: header;
+  z-index: 5;
+  background-color: #66BFBF;
+}
+
+header ul {
+  margin: 0 4em;
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+header li {
+  display: block;
+  padding: 10px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header a {
+  text-transform: capitalize;
+  color: #056674;
+  font-size: larger;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+section.other {
+  -ms-grid-row: 2;
+  -ms-grid-column: 3;
+  grid-area: other;
+  background-image: url(/images/masks.jpg);
+  background-color: #056674;
+  background-size: cover;
+  background-repeat: no-repeat;
+  -webkit-box-shadow: 15px 15px 15px 0px rgba(0, 0, 0, 0.6);
+          box-shadow: 15px 15px 15px 0px rgba(0, 0, 0, 0.6);
+}
+
+section.customerquote {
+  -ms-grid-row: 3;
+  -ms-grid-column: 2;
+  grid-area: testimonial;
+  background: #66BFBF;
+}
+
+section.quote {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  grid-area: quote;
+  margin: 0;
+  padding: 0;
+  background-color: #E0ECE4;
+}
+
+.masks {
+  -ms-grid-row: 3;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 1;
+  grid-area: masks;
+  background-image: url("../images/masks.jpg");
+  background-size: cover;
+  background-position: center;
+  -webkit-box-shadow: 10px 10px 15px 0px rgba(0, 0, 0, 0.6);
+          box-shadow: 10px 10px 15px 0px rgba(0, 0, 0, 0.6);
+  -webkit-transform: rotateZ(-15deg);
+          transform: rotateZ(-15deg);
+  z-index: 5;
+}
+
+footer {
+  -ms-grid-row: 4;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 2;
+  grid-area: footer;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  background-color: #FF4B5C;
+}
+
+footer p {
+  margin: 0 10%;
+}
+
+.mainimg {
+  max-height: calc(100% - 9em);
+  min-height: inherit;
+  overflow: visible;
+  width: auto;
+}
+
+.customerquoteleft {
+  margin: 0;
+  padding: 1em;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 6fr 12fr 1fr;
+      grid-template-columns: 1fr 6fr 12fr 1fr;
+  -ms-grid-rows: 1fr 3fr 3fr 1fr;
+      grid-template-rows: 1fr 3fr 3fr 1fr;
+  gap: 0px 0px;
+      grid-template-areas: ". . . ." ". image quote ." ". image name ." ". . . .";
+}
+
+.customerquoteright {
+  margin: 0;
+  padding: 1em;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 12fr 6fr 1fr;
+      grid-template-columns: 1fr 12fr 6fr 1fr;
+  -ms-grid-rows: 1fr 3fr 3fr 1fr;
+      grid-template-rows: 1fr 3fr 3fr 1fr;
+  gap: 0px 0px;
+      grid-template-areas: ". . . ." ". quote image ." ". name image ." ". . . .";
+}
+
+.custimage {
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 3;
+  grid-area: image;
+  margin: 0;
+  padding: 1em;
+  min-width: 150px;
+  max-width: 70%;
+  height: auto;
+  border-radius: 50%;
+  background-image: url(https://randomuser.me/api/portraits/men/75.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.4) -5px 5px 20px 0px;
+          box-shadow: rgba(0, 0, 0, 0.4) -5px 5px 20px 0px;
+}
+
+.custimager {
+  background-image: url(https://randomuser.me/api/portraits/men/25.jpg);
+}
+
+.customername {
+  -ms-grid-row: 3;
+  -ms-grid-column: 2;
+  grid-area: name;
+  color: #056674;
+  margin: 1.5em;
+  size: 2em;
+  padding: 0;
+}
+
+.customerquotetext {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  grid-area: quote;
+  margin: auto 0 0.4em 0;
+  padding: 0.2em;
+  color: black;
+}
+
+h3 {
+  font-size: small;
+}
+/*# sourceMappingURL=main.css.map */

@@ -1,0 +1,182 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+p {
+    color: #056674;
+    text-align: center;
+    font-family: 'Merriweather', serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    background-color:#E0ECE4;
+}
+
+h1, h2, h3 {
+    padding: .5em;
+
+    font-size: 3em;
+    text-align: center;
+    color:#056674;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.grid-container {
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: 1fr 1.2fr 1.5fr;
+    grid-template-rows: 0.5fr 6fr 3fr 1fr;
+    grid-template-areas:
+        "main main header"
+        "main main other"
+        "masks testimonial quote"
+        "masks footer footer";
+    height: 100vh;
+}
+
+main {
+    grid-area: main;
+    background-color: #E0ECE4;
+    text-align: center;
+    h1 {
+        padding-bottom: 0;
+    }
+}
+header {
+    grid-area: header;
+    z-index: 5;
+    background-color: #66BFBF;
+    ul {
+        margin: 0 4em;
+        list-style: none;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+    li {
+        display: block;
+        padding: 10px;
+        align-items: center;
+    }
+    a {
+        text-transform: capitalize;
+        color: #056674;
+        font-size: larger;
+        text-transform: uppercase;
+        text-decoration: none;
+        font-weight: bold;
+    }
+}
+section.other {
+    grid-area: other;
+    background-image: url(/images/masks.jpg);
+    background-color: #056674;
+    background-size: cover;
+    background-repeat: no-repeat;
+    box-shadow: 15px 15px 15px 0px rgba(0, 0, 0, 0.6);
+    // z-index: 1;
+    // overflow: auto;
+    // transform: rotateZ(-5deg);
+}
+section.customerquote {
+    grid-area: testimonial;
+    background:#66BFBF;
+}
+section.quote {
+    grid-area: quote;
+    margin: 0;
+    padding: 0;
+    background-color: #E0ECE4;
+}
+.masks {
+    grid-area: masks;
+    background-image: url('../images/masks.jpg');
+    background-size: cover;
+    background-position: center;
+    box-shadow: 10px 10px 15px 0px rgba(0, 0, 0, 0.6);
+    transform: rotateZ(-15deg);
+    
+    z-index: 5;
+}
+footer {
+    grid-area: footer;
+    display: grid;
+    place-items: center;
+    background-color: #FF4B5C;
+    p {
+        margin: 0 10%;
+    }
+}
+.mainimg {
+    max-height: calc(100% - 9em);
+    min-height: inherit;
+    overflow: visible;
+    width: auto;
+    // mix-blend-mode: darken;
+}
+.customerquoteleft {
+    margin: 0;
+    padding: 1em;
+    display: grid;
+    grid-template-columns: 1fr 6fr 12fr 1fr;
+    grid-template-rows: 1fr 3fr 3fr 1fr;
+    gap: 0px 0px;
+    grid-template-areas:
+        ". . . ."
+        ". image quote ."
+        ". image name ."
+        ". . . .";
+}
+
+.customerquoteright {
+    margin: 0;
+    padding: 1em;
+    display: grid;
+    grid-template-columns: 1fr 12fr 6fr 1fr;
+    grid-template-rows: 1fr 3fr 3fr 1fr;
+    gap: 0px 0px;
+    grid-template-areas:
+        ". . . ."
+        ". quote image ."
+        ". name image ."
+        ". . . .";
+}
+
+.custimage {
+    grid-area: image;
+    margin: 0;
+    padding: 1em;
+    min-width: 150px;
+    max-width: 70%;
+    height: auto;
+    border-radius: 50%;
+    background-image: url(https://randomuser.me/api/portraits/men/75.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    box-shadow: rgba(0, 0, 0, 0.4) -5px 5px 20px 0px;
+}
+.custimager {
+    background-image: url(https://randomuser.me/api/portraits/men/25.jpg);
+}
+
+.customername {
+    grid-area: name;
+    color: #056674;
+    margin: 1.5em;
+    size: 2em;
+    padding: 0;
+}
+.customerquotetext {
+    grid-area: quote;
+    margin: auto 0 0.4em 0;
+    padding: 0.2em;
+    color: black;
+}
+
+h3 {
+    font-size: small;
+}

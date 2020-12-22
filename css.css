@@ -1,0 +1,41 @@
+.container {
+    width: 50%;
+    height: 50vh;
+    background-color: bisque;
+}
+
+.grid {
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr 2fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    gap: 0px 0px;
+    grid-template-areas:
+        ". . . ."
+        ". image name ."
+        ". image quote ."
+        ". . . .";
+    }
+    img {
+        grid-area: image;
+        margin: 0;
+        padding: 0;
+        min-width: 150px;
+        max-width: 70%;
+        height: auto;
+        border: 1px black solid;
+        border-radius: 50%;
+    }
+
+    .name {
+        color: blue;
+        grid-area: name;
+        border: 1px black solid;
+
+    }
+    .quote {
+        grid-area: quote;
+        border: 1px black solid;
+    color: red;
+}
